@@ -1,0 +1,22 @@
+{
+    "name": "ohmyfood",
+    "version": "1.0.0",
+    "description": "Projet 3 OhMyFood OpenClassrooms",
+    "main": "index.js",
+    "scripts": {
+        "sass": "sass --watch style.scss style.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/neodwin/EdwinDervaux_3_21012022.git"
+    },
+    "author": "Edwin Dervaux",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/neodwin/EdwinDervaux_3_21012022/issues"
+    },
+    "homepage": "https://github.com/neodwin/EdwinDervaux_3_21012022#readme",
+    "dependencies": {
+        "sass": "^1.49.0"
+    }
+}
