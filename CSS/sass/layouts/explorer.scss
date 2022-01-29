@@ -1,9 +1,10 @@
 @use "../utils/box-shadow.scss";
 @use "../utils/zoom.scss";
+@use "../utils/colors.scss";
 .explorer {
     text-align: center;
     padding-bottom: 20px;
-    background-color: #f6f6f6;
+    background-color: colors.$lightgrey;
     & h2 {
         font-size: 30px;
         margin-top: 0px;

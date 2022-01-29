@@ -67,6 +67,7 @@ header {
 .function {
   padding-top: 20px;
   padding-right: 10px;
+  margin-bottom: 30px;
 }
 .function h2 {
   padding: 0 25px;
@@ -111,6 +112,45 @@ header {
   margin-right: 15px;
   font-size: 24px;
   color: #7e7e7e;
+}
+
+.restaurants {
+  background-color: #f6f6f6;
+  padding: 8px 0px 0px 10px;
+}
+.restaurants h2 {
+  padding: 20px 0px 0px 15px;
+}
+.restaurants .restaurants__card {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 15px 20px;
+}
+.restaurants .card {
+  background-color: white;
+  border-radius: 15px;
+  flex-grow: 1;
+  height: 280px;
+  min-width: 374px;
+  width: 40%;
+  text-decoration: none;
+}
+.restaurants .card .card__picture {
+  border-radius: 15px 15px 0px 0px;
+  height: 187px;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.restaurants .card .card__description {
+  color: black;
+  padding: 0px 0px 0px 10px;
+  margin-top: -2px;
+}
+.restaurants .card .card__description p {
+  margin-top: -10px;
 }
 
 /*# sourceMappingURL=style.css.map */
