@@ -1,7 +1,7 @@
 @use "../utils/colors.scss";
 .restaurants {
     background-color: colors.$lightgrey;
-    padding: 8px 0px 0px 10px;
+    padding: 8px 0px 0px 0px;
     & h2 {
         padding: 20px 0px 0px 15px;
     }
@@ -11,6 +11,23 @@
         flex-wrap: wrap;
         gap: 30px;
         padding: 15px 20px;
+        & .new {
+            position: relative;
+        }
+        & .new::before {
+            content: "Nouveau";
+            position: absolute;
+            background-color: colors.$backgreen;
+            color: colors.$fontgreen;
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            height: 30px;
+            width: 80px;
+            font-weight: bold;
+            right: 15px;
+            top: 15px;
+        }
     }
     & .card {
         background-color: white;

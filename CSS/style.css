@@ -48,6 +48,8 @@ header {
   color: white;
   padding: 15px;
   width: 15%;
+  max-width: 204px;
+  min-width: 204px;
   border-radius: 30px;
   background-image: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   transition: all 200ms;
@@ -90,6 +92,10 @@ header {
   border-radius: 15px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
+.function li:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
 .function .colored {
   background-color: #eee5f7;
 }
@@ -116,7 +122,7 @@ header {
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 8px 0px 0px 10px;
+  padding: 8px 0px 0px 0px;
 }
 .restaurants h2 {
   padding: 20px 0px 0px 15px;
@@ -127,6 +133,23 @@ header {
   flex-wrap: wrap;
   gap: 30px;
   padding: 15px 20px;
+}
+.restaurants .restaurants__card .new {
+  position: relative;
+}
+.restaurants .restaurants__card .new::before {
+  content: "Nouveau";
+  position: absolute;
+  background-color: #99E2D0;
+  color: #1a8a68;
+  display: flex;
+  justify-content: center;
+  place-items: center;
+  height: 30px;
+  width: 80px;
+  font-weight: bold;
+  right: 15px;
+  top: 15px;
 }
 .restaurants .card {
   background-color: white;

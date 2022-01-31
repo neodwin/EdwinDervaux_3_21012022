@@ -20,6 +20,8 @@
         color: white;
         padding: 15px;
         width: 15%;
+        max-width: 204px;
+        min-width: 204px;
         border-radius: 30px;
         background-image: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
         transition: all 200ms;

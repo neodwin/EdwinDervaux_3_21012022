@@ -1,5 +1,6 @@
             @use "../utils/box-shadow.scss";
             @use "../utils/colors.scss";
+            @use "../utils/zoom.scss";
             .function {
                 padding-top: 20px;
                 padding-right: 10px;
@@ -22,6 +23,10 @@
                     flex-grow: 1;
                     border-radius: 15px;
                     @include box-shadow.shadow-1;
+                    &:hover {
+                        @include zoom.zoom;
+                        cursor: pointer;
+                    }
                 }
                 & .colored {
                     background-color: #eee5f7;
