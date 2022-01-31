@@ -45,11 +45,19 @@
             object-position: center;
         }
         & .card__description {
-            color: black;
-            padding: 0px 0px 0px 10px;
-            margin-top: -2px;
-            & p {
-                margin-top: -10px;
+            position: relative;
+            & h3,
+            p {
+                color: black;
+                margin-left: 10px;
+                margin-bottom: -7px
+            }
+            & i {
+                color: black;
+                font-size: 30px;
+                position: absolute;
+                top: 1px;
+                right: 15px;
             }
         }
     }
