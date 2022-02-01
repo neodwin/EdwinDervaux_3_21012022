@@ -1,0 +1,23 @@
+@use "../utils/colors.scss";
+footer {
+    display: flex;
+    flex-direction: column;
+    background-color: colors.$footergrey;
+    color: white;
+    padding: 15px 30px;
+    & h2 {
+        font-family: 'Shrikhand', cursive;
+    }
+    & a {
+        margin-bottom: 10px;
+        font-size: 20px;
+        text-decoration: none;
+        color: inherit;
+        & .fa-utensils {
+            margin-right: 15px;
+        }
+        & .fa-hands-helping {
+            margin-right: 7px;
+        }
+    }
+}

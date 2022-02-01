@@ -184,4 +184,27 @@ header {
   right: 15px;
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  background-color: #353535;
+  color: white;
+  padding: 15px 30px;
+}
+footer h2 {
+  font-family: "Shrikhand", cursive;
+}
+footer a {
+  margin-bottom: 10px;
+  font-size: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+footer a .fa-utensils {
+  margin-right: 15px;
+}
+footer a .fa-hands-helping {
+  margin-right: 7px;
+}
+
 /*# sourceMappingURL=style.css.map */
