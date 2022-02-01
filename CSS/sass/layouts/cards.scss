@@ -1,9 +1,10 @@
 @use "../utils/colors.scss";
+@use "../utils/linear-gradient.scss";
 .restaurants {
     background-color: colors.$lightgrey;
     padding: 8px 0px 0px 0px;
     & h2 {
-        padding: 20px 0px 0px 15px;
+        padding: 20px 0px 0px 20px;
     }
     & .restaurants__card {
         display: flex;
@@ -58,6 +59,18 @@
                 position: absolute;
                 top: 1px;
                 right: 15px;
+            }
+            & .fas {
+                color: transparent;
+                @include linear-gradient.gradient;
+                background-clip: text;
+                -webkit-background-clip: text;
+                opacity: 0;
+                transition: all 200ms ease-in-out;
+            }
+            &:hover .fas {
+                opacity: 1;
+                transform: scale(1.09);
             }
         }
     }

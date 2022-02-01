@@ -51,9 +51,9 @@ header {
   max-width: 204px;
   min-width: 204px;
   border-radius: 30px;
-  background-image: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
   transition: all 200ms;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-image: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
 }
 @media (max-width: 800px) {
   .explorer button {
@@ -72,7 +72,7 @@ header {
   margin-bottom: 30px;
 }
 .function h2 {
-  padding: 0 25px;
+  padding: 0 20px;
 }
 .function ol {
   list-style: none;
@@ -125,7 +125,7 @@ header {
   padding: 8px 0px 0px 0px;
 }
 .restaurants h2 {
-  padding: 20px 0px 0px 15px;
+  padding: 20px 0px 0px 20px;
 }
 .restaurants .restaurants__card {
   display: flex;
@@ -182,6 +182,18 @@ header {
   position: absolute;
   top: 1px;
   right: 15px;
+}
+.restaurants .card .card__description .fas {
+  color: transparent;
+  background-image: linear-gradient(162deg, #ff79da 0%, #9356dc 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  opacity: 0;
+  transition: all 200ms ease-in-out;
+}
+.restaurants .card .card__description:hover .fas {
+  opacity: 1;
+  transform: scale(1.09);
 }
 
 footer {
