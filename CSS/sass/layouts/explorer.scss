@@ -1,7 +1,5 @@
-@use "../utils/box-shadow.scss";
-@use "../utils/zoom.scss";
+@use "../utils/mixins.scss";
 @use "../utils/colors.scss";
-@use "../utils/linear-gradient.scss";
 .explorer {
     text-align: center;
     padding-bottom: 20px;
@@ -25,14 +23,14 @@
         min-width: 204px;
         border-radius: 30px;
         transition: all 200ms;
-        @include box-shadow.shadow-1;
-        @include linear-gradient.gradient;
+        @include mixins.shadow-1;
+        @include mixins.gradient;
         @media (max-width: 800px) {
             width: 50%;
         }
     }
     & button:hover {
-        @include zoom.zoom;
+        @include mixins.zoom;
         opacity: 0.9;
         cursor: pointer;
     }

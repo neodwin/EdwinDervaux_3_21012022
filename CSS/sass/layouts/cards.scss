@@ -1,5 +1,5 @@
 @use "../utils/colors.scss";
-@use "../utils/linear-gradient.scss";
+@use "../utils/mixins.scss";
 .restaurants {
     background-color: colors.$lightgrey;
     padding: 8px 0px 0px 0px;
@@ -63,7 +63,7 @@
             }
             & .fas {
                 color: transparent;
-                @include linear-gradient.gradient;
+                @include mixins.gradient;
                 background-clip: text;
                 -webkit-background-clip: text;
                 opacity: 0;
