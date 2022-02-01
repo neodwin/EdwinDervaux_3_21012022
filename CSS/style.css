@@ -268,7 +268,6 @@ footer a .fa-hands-helping {
   padding: 15px 10px;
 }
 .flex-starter .menu-align {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
@@ -278,8 +277,12 @@ footer a .fa-hands-helping {
   margin: 0px;
 }
 .flex-starter .starter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   background-color: white;
   border-radius: 20px;
+  padding: 10px;
 }
 
 .flex-flat {
