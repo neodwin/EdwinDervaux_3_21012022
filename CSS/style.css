@@ -259,4 +259,51 @@ footer a .fa-hands-helping {
   transform: scale(1.09);
 }
 
+.flex-starter {
+  margin: 0px;
+  background-color: #f3f3f3;
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+  padding: 15px 10px;
+}
+.flex-starter .menu-align {
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+.flex-starter .menu-align .name-menu,
+.flex-starter .menu-align .description-menu,
+.flex-starter .menu-align .price {
+  margin: 0px;
+}
+.flex-starter .starter {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.flex-flat {
+  background-color: #f3f3f3;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 15px 10px;
+}
+.flex-flat .flat {
+  background-color: white;
+  border-radius: 20px;
+}
+
+.flex-dessert {
+  background-color: #f3f3f3;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 15px 10px;
+}
+.flex-dessert .dessert {
+  background-color: white;
+  border-radius: 20px;
+}
+
 /*# sourceMappingURL=style.css.map */

@@ -38,3 +38,50 @@
         transform: scale(1.09);
     }
 }
+
+.flex-starter {
+    margin: 0px;
+    background-color: colors.$menugrey;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding: 15px 10px;
+    & .menu-align {
+        border: 1px solid black;
+        display: flex;
+        flex-direction: column;
+        & .name-menu,
+        .description-menu,
+        .price {
+            margin: 0px;
+        }
+    }
+    & .starter {
+        background-color: white;
+        border-radius: 20px;
+    }
+}
+
+.flex-flat {
+    background-color: colors.$menugrey;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 15px 10px;
+    & .flat {
+        background-color: white;
+        border-radius: 20px;
+    }
+}
+
+.flex-dessert {
+    background-color: colors.$menugrey;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 15px 10px;
+    & .dessert {
+        background-color: white;
+        border-radius: 20px;
+    }
+}
