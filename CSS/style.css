@@ -133,6 +133,7 @@ header {
   flex-wrap: wrap;
   gap: 30px;
   padding: 15px 20px;
+  padding-bottom: 70px;
 }
 .restaurants .restaurants__card .new {
   position: relative;
