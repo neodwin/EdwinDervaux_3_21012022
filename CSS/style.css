@@ -287,6 +287,7 @@ footer a .fa-hands-helping {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  padding: 10px;
 }
 .flex-meal .menu-align .name-menu,
 .flex-meal .menu-align .description-menu,
@@ -299,16 +300,47 @@ footer a .fa-hands-helping {
   justify-content: space-between;
   background-color: white;
   border-radius: 20px;
-  padding: 10px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .flex-meal .meal .description-menu {
   font-weight: lighter;
 }
 .flex-meal .meal .price-align {
-  position: relative;
-  top: 13px;
-  right: 10px;
+  display: flex;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.flex-meal .meal .price-align .price {
+  padding: 0px 8px;
+}
+.flex-meal .meal .price-align .price-align__check {
+  background-color: #99E2D0;
+  border-radius: 0px 20px 20px 0px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: -16px -120px -16px 16px;
+  transition-duration: 0.5s;
+  width: 104px;
+}
+.flex-meal .meal .price-align:hover .price-align__check {
+  margin: 0px;
+}
+.flex-meal .meal .price-align .fas {
+  align-items: center;
+  background-color: white;
+  border-radius: 100px;
+  color: #99E2D0;
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  transform: rotate(180deg);
+  transition-duration: 0.8s;
+  width: 25px;
+}
+.flex-meal .meal .price-align:hover .flex-meal .meal .price-align__check {
+  transform: rotate(0);
 }
 
 .flex-meal {
