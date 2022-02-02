@@ -236,6 +236,7 @@ footer a .fa-hands-helping {
   margin-top: -25px;
   margin-bottom: 0px;
   font-family: "Shrikhand", cursive;
+  font-weight: normal;
   border-radius: 30px 30px 0 0;
   background-color: #f3f3f3;
 }
@@ -257,6 +258,7 @@ footer a .fa-hands-helping {
 .palette__main:hover .fas {
   opacity: 1;
   transform: scale(1.09);
+  cursor: pointer;
 }
 
 .flex-meal {
@@ -266,6 +268,20 @@ footer a .fa-hands-helping {
   gap: 15px;
   flex-direction: column;
   padding: 15px 10px;
+}
+.flex-meal .meal-title {
+  padding: 15px 10px;
+  text-transform: uppercase;
+  position: relative;
+}
+.flex-meal .meal-title::after {
+  content: "";
+  height: 4px;
+  width: 40px;
+  background-color: #99E2D0;
+  position: absolute;
+  top: 40px;
+  left: 10px;
 }
 .flex-meal .menu-align {
   display: flex;
@@ -284,6 +300,7 @@ footer a .fa-hands-helping {
   background-color: white;
   border-radius: 20px;
   padding: 10px;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 .flex-meal .meal .description-menu {
   font-weight: lighter;
