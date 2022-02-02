@@ -85,3 +85,31 @@
         border-radius: 20px;
     }
 }
+
+.order {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0px;
+    margin-bottom: 15px;
+    button {
+        margin-top: 20px;
+        border: none;
+        color: white;
+        padding: 15px;
+        width: 15%;
+        max-width: 204px;
+        min-width: 204px;
+        border-radius: 30px;
+        transition: all 200ms;
+        @include mixins.shadow-1;
+        @include mixins.gradient;
+        @media (max-width: 800px) {
+            width: 50%;
+        }
+        &:hover {
+            @include mixins.zoom;
+            opacity: 0.9;
+            cursor: pointer;
+        }
+    }
+}
