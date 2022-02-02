@@ -259,7 +259,7 @@ footer a .fa-hands-helping {
   transform: scale(1.09);
 }
 
-.flex-starter {
+.flex-meal {
   margin: 0px;
   background-color: #f3f3f3;
   display: flex;
@@ -267,16 +267,17 @@ footer a .fa-hands-helping {
   flex-direction: column;
   padding: 15px 10px;
 }
-.flex-starter .menu-align {
+.flex-meal .menu-align {
   display: flex;
   flex-direction: column;
+  gap: 6px;
 }
-.flex-starter .menu-align .name-menu,
-.flex-starter .menu-align .description-menu,
-.flex-starter .menu-align .price {
+.flex-meal .menu-align .name-menu,
+.flex-meal .menu-align .description-menu,
+.flex-meal .menu-align .price {
   margin: 0px;
 }
-.flex-starter .starter {
+.flex-meal .meal {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -284,27 +285,23 @@ footer a .fa-hands-helping {
   border-radius: 20px;
   padding: 10px;
 }
+.flex-meal .meal .description-menu {
+  font-weight: lighter;
+}
+.flex-meal .meal .price-align {
+  position: relative;
+  top: 13px;
+  right: 10px;
+}
 
-.flex-flat {
+.flex-meal {
   background-color: #f3f3f3;
   display: flex;
   gap: 10px;
   flex-direction: column;
   padding: 15px 10px;
 }
-.flex-flat .flat {
-  background-color: white;
-  border-radius: 20px;
-}
-
-.flex-dessert {
-  background-color: #f3f3f3;
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  padding: 15px 10px;
-}
-.flex-dessert .dessert {
+.flex-meal .flat {
   background-color: white;
   border-radius: 20px;
 }

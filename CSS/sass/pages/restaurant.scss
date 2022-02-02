@@ -39,7 +39,7 @@
     }
 }
 
-.flex-starter {
+.flex-meal {
     margin: 0px;
     background-color: colors.$menugrey;
     display: flex;
@@ -49,41 +49,38 @@
     & .menu-align {
         display: flex;
         flex-direction: column;
+        gap: 6px;
         & .name-menu,
         .description-menu,
         .price {
             margin: 0px;
         }
     }
-    & .starter {
+    & .meal {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         background-color: white;
         border-radius: 20px;
         padding: 10px;
+        & .description-menu {
+            font-weight: lighter;
+        }
+        & .price-align {
+            position: relative;
+            top: 13px;
+            right: 10px;
+        }
     }
 }
 
-.flex-flat {
+.flex-meal {
     background-color: colors.$menugrey;
     display: flex;
     gap: 10px;
     flex-direction: column;
     padding: 15px 10px;
     & .flat {
-        background-color: white;
-        border-radius: 20px;
-    }
-}
-
-.flex-dessert {
-    background-color: colors.$menugrey;
-    display: flex;
-    gap: 10px;
-    flex-direction: column;
-    padding: 15px 10px;
-    & .dessert {
         background-color: white;
         border-radius: 20px;
     }
