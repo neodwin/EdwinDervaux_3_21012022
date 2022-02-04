@@ -67,11 +67,8 @@
         flex-direction: column;
         gap: 6px;
         padding: 10px;
-        & .name-menu,
-        .description-menu {
-            text-overflow: ellipsis;
-            white-space: nowrap;
-        }
+        text-overflow: ellipsis;
+        white-space: nowrap;
         & .name-menu,
         .description-menu,
         .price {
@@ -85,12 +82,18 @@
         background-color: white;
         border-radius: 20px;
         @include mixins.shadow-1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        &:hover {
+            cursor: pointer;
+        }
         & .description-menu {
             font-weight: lighter;
         }
         & .price-align {
             display: flex;
             overflow: hidden;
+            white-space: nowrap;
             & .price {
                 padding: 0px 15px;
                 display: flex;
@@ -103,9 +106,9 @@
             align-items: center;
             display: flex;
             justify-content: center;
-            margin: -16px -120px -16px 16px;
+            margin: -16px -71px -16px 16px;
             transition-duration: .5s;
-            width: 104px;
+            width: 71px;
         }
         &:hover .price-align__check {
             margin: 0px;

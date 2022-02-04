@@ -288,9 +288,6 @@ footer a .fa-hands-helping {
   flex-direction: column;
   gap: 6px;
   padding: 10px;
-}
-.flex-meal .menu-align .name-menu,
-.flex-meal .menu-align .description-menu {
   text-overflow: ellipsis;
   white-space: nowrap;
 }
@@ -306,6 +303,11 @@ footer a .fa-hands-helping {
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.flex-meal .meal:hover {
+  cursor: pointer;
 }
 .flex-meal .meal .description-menu {
   font-weight: lighter;
@@ -313,6 +315,7 @@ footer a .fa-hands-helping {
 .flex-meal .meal .price-align {
   display: flex;
   overflow: hidden;
+  white-space: nowrap;
 }
 .flex-meal .meal .price-align .price {
   padding: 0px 15px;
@@ -325,9 +328,9 @@ footer a .fa-hands-helping {
   align-items: center;
   display: flex;
   justify-content: center;
-  margin: -16px -120px -16px 16px;
+  margin: -16px -71px -16px 16px;
   transition-duration: 0.5s;
-  width: 104px;
+  width: 71px;
 }
 .flex-meal .meal:hover .price-align__check {
   margin: 0px;
