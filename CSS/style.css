@@ -290,6 +290,11 @@ footer a .fa-hands-helping {
   padding: 10px;
 }
 .flex-meal .menu-align .name-menu,
+.flex-meal .menu-align .description-menu {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.flex-meal .menu-align .name-menu,
 .flex-meal .menu-align .description-menu,
 .flex-meal .menu-align .price {
   margin: 0px;
@@ -308,13 +313,13 @@ footer a .fa-hands-helping {
 .flex-meal .meal .price-align {
   display: flex;
   overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .flex-meal .meal .price-align .price {
-  padding: 0px 8px;
+  padding: 0px 15px;
+  display: flex;
+  align-items: end;
 }
-.flex-meal .meal .price-align .price-align__check {
+.flex-meal .meal .price-align__check {
   background-color: #99E2D0;
   border-radius: 0px 20px 20px 0px;
   align-items: center;
@@ -324,10 +329,10 @@ footer a .fa-hands-helping {
   transition-duration: 0.5s;
   width: 104px;
 }
-.flex-meal .meal .price-align:hover .price-align__check {
+.flex-meal .meal:hover .price-align__check {
   margin: 0px;
 }
-.flex-meal .meal .price-align .fas {
+.flex-meal .meal .check-items {
   align-items: center;
   background-color: white;
   border-radius: 100px;
@@ -336,11 +341,11 @@ footer a .fa-hands-helping {
   height: 25px;
   justify-content: center;
   transform: rotate(180deg);
-  transition-duration: 0.8s;
+  transition-duration: 1s;
   width: 25px;
 }
-.flex-meal .meal .price-align:hover .flex-meal .meal .price-align__check {
-  transform: rotate(0);
+.flex-meal .meal:hover .check-items {
+  transform: rotate(0deg);
 }
 
 .flex-meal {

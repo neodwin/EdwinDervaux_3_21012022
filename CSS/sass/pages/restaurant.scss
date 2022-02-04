@@ -1,164 +1,169 @@
-    @use "../utils/mixins.scss";
-    @use "../utils/colors.scss";
-    .palette__picture img {
-        display: block;
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-        object-position: center;
+@use "../utils/mixins.scss";
+@use "../utils/colors.scss";
+.palette__picture img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.palette__main {
+    position: relative;
+    & .title-restaurants {
+        padding: 30px 24px;
+        margin-top: -25px;
+        margin-bottom: 0px;
+        font-family: 'Shrikhand', cursive;
+        font-weight: normal;
+        border-radius: 30px 30px 0 0;
+        background-color: colors.$menugrey;
     }
-    
-    .palette__main {
+    & i {
+        color: black;
+        font-size: 30px;
+        position: absolute;
+        top: 25px;
+        right: 100px;
+    }
+    & .fas {
+        color: transparent;
+        @include mixins.gradient;
+        background-clip: text;
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: all 200ms ease-in-out;
+    }
+    &:hover .fas {
+        opacity: 1;
+        transform: scale(1.09);
+        cursor: pointer;
+    }
+}
+
+.flex-meal {
+    margin: 0px;
+    background-color: colors.$menugrey;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding: 15px 10px;
+    & .meal-title {
+        padding: 15px 10px;
+        text-transform: uppercase;
         position: relative;
-        & .title-restaurants {
-            padding: 30px 24px;
-            margin-top: -25px;
-            margin-bottom: 0px;
-            font-family: 'Shrikhand', cursive;
-            font-weight: normal;
-            border-radius: 30px 30px 0 0;
-            background-color: colors.$menugrey;
-        }
-        & i {
-            color: black;
-            font-size: 30px;
+        &::after {
+            content: "";
+            height: 4px;
+            width: 40px;
+            background-color: colors.$backgreen;
             position: absolute;
-            top: 25px;
-            right: 100px;
+            top: 40px;
+            left: 10px;
         }
-        & .fas {
-            color: transparent;
-            @include mixins.gradient;
-            background-clip: text;
-            -webkit-background-clip: text;
-            opacity: 0;
-            transition: all 200ms ease-in-out;
+    }
+    & .menu-align {
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+        & .name-menu,
+        .description-menu {
+            text-overflow: ellipsis;
+            white-space: nowrap;
         }
-        &:hover .fas {
-            opacity: 1;
-            transform: scale(1.09);
+        & .name-menu,
+        .description-menu,
+        .price {
+            margin: 0px;
+        }
+    }
+    & .meal {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        background-color: white;
+        border-radius: 20px;
+        @include mixins.shadow-1;
+        & .description-menu {
+            font-weight: lighter;
+        }
+        & .price-align {
+            display: flex;
+            overflow: hidden;
+            & .price {
+                padding: 0px 15px;
+                display: flex;
+                align-items: end;
+            }
+        }
+        & .price-align__check {
+            background-color: colors.$backgreen;
+            border-radius: 0px 20px 20px 0px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin: -16px -120px -16px 16px;
+            transition-duration: .5s;
+            width: 104px;
+        }
+        &:hover .price-align__check {
+            margin: 0px;
+        }
+        & .check-items {
+            align-items: center;
+            background-color: white;
+            border-radius: 100px;
+            color: colors.$backgreen;
+            display: flex;
+            height: 25px;
+            justify-content: center;
+            transform: rotate(180deg);
+            transition-duration: 1s;
+            width: 25px;
+        }
+        &:hover .check-items {
+            transform: rotate(0deg);
+        }
+    }
+}
+
+.flex-meal {
+    background-color: colors.$menugrey;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+    padding: 15px 10px;
+    & .flat {
+        background-color: white;
+        border-radius: 20px;
+    }
+}
+
+.order {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 0px;
+    margin-bottom: 15px;
+    button {
+        margin-top: 20px;
+        border: none;
+        color: white;
+        padding: 15px;
+        width: 15%;
+        max-width: 204px;
+        min-width: 204px;
+        border-radius: 30px;
+        transition: all 200ms;
+        @include mixins.shadow-1;
+        @include mixins.gradient;
+        @media (max-width: 800px) {
+            width: 50%;
+        }
+        &:hover {
+            @include mixins.zoom;
+            opacity: 0.9;
             cursor: pointer;
         }
     }
-    
-    .flex-meal {
-        margin: 0px;
-        background-color: colors.$menugrey;
-        display: flex;
-        gap: 15px;
-        flex-direction: column;
-        padding: 15px 10px;
-        & .meal-title {
-            padding: 15px 10px;
-            text-transform: uppercase;
-            position: relative;
-            &::after {
-                content: "";
-                height: 4px;
-                width: 40px;
-                background-color: colors.$backgreen;
-                position: absolute;
-                top: 40px;
-                left: 10px;
-            }
-        }
-        & .menu-align {
-            display: flex;
-            flex-direction: column;
-            gap: 6px;
-            padding: 10px;
-            & .name-menu,
-            .description-menu,
-            .price {
-                margin: 0px;
-            }
-        }
-        & .meal {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            background-color: white;
-            border-radius: 20px;
-            @include mixins.shadow-1;
-            & .description-menu {
-                font-weight: lighter;
-            }
-            & .price-align {
-                display: flex;
-                overflow: hidden;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                & .price {
-                    padding: 0px 8px;
-                }
-                & .price-align__check {
-                    background-color: colors.$backgreen;
-                    border-radius: 0px 20px 20px 0px;
-                    align-items: center;
-                    display: flex;
-                    justify-content: center;
-                    margin: -16px -120px -16px 16px;
-                    transition-duration: .5s;
-                    width: 104px;
-                }
-                &:hover .price-align__check {
-                    margin: 0px;
-                }
-                & .fas {
-                    align-items: center;
-                    background-color: white;
-                    border-radius: 100px;
-                    color: colors.$backgreen;
-                    display: flex;
-                    height: 25px;
-                    justify-content: center;
-                    transform: rotate(180deg);
-                    transition-duration: .8s;
-                    width: 25px;
-                }
-                &:hover &__check {
-                    transform: rotate(0);
-                }
-            }
-        }
-    }
-    
-    .flex-meal {
-        background-color: colors.$menugrey;
-        display: flex;
-        gap: 10px;
-        flex-direction: column;
-        padding: 15px 10px;
-        & .flat {
-            background-color: white;
-            border-radius: 20px;
-        }
-    }
-    
-    .order {
-        display: flex;
-        justify-content: space-around;
-        padding: 30px 0px;
-        margin-bottom: 15px;
-        button {
-            margin-top: 20px;
-            border: none;
-            color: white;
-            padding: 15px;
-            width: 15%;
-            max-width: 204px;
-            min-width: 204px;
-            border-radius: 30px;
-            transition: all 200ms;
-            @include mixins.shadow-1;
-            @include mixins.gradient;
-            @media (max-width: 800px) {
-                width: 50%;
-            }
-            &:hover {
-                @include mixins.zoom;
-                opacity: 0.9;
-                cursor: pointer;
-            }
-        }
-    }
+}
