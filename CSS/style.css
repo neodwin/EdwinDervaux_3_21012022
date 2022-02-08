@@ -220,6 +220,26 @@ footer a .fa-hands-helping {
   margin-right: 7px;
 }
 
+#restaurant-page a {
+  text-decoration: none;
+  color: inherit;
+}
+#restaurant-page header::before {
+  display: inline-block;
+  position: absolute;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f060";
+  font-size: 20px;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .palette__picture img {
   display: block;
   width: 100%;
@@ -305,6 +325,7 @@ footer a .fa-hands-helping {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   text-overflow: ellipsis;
   white-space: nowrap;
+  animation: 1s ease-in 1s slidein;
 }
 .flex-meal .meal:hover {
   cursor: pointer;

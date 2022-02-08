@@ -9,3 +9,14 @@
 @mixin zoom {
     transform: scale(1.02);
 }
+
+@mixin font-awesome {
+    display: inline-block;
+    position: absolute;
+    font-style: normal;
+    font-variant: normal;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+}
