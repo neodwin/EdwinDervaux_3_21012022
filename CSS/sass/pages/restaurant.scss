@@ -1,188 +1,196 @@
-        @use "../utils/mixins.scss";
-        @use "../utils/colors.scss";
-        #restaurant-page {
-            a {
-                text-decoration: none;
-                color: inherit;
+            @use "../utils/mixins.scss";
+            @use "../utils/colors.scss";
+            #restaurant-page {
+                a {
+                    text-decoration: none;
+                    color: inherit;
+                }
+                header::before {
+                    @include mixins.font-awesome;
+                    content: "\f060";
+                    font-size: 20px;
+                    left: 15px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
             }
-            header::before {
-                @include mixins.font-awesome;
-                content: "\f060";
-                font-size: 20px;
-                left: 15px;
-                top: 50%;
-                transform: translateY(-50%);
+            
+            .palette__picture img {
+                display: block;
+                width: 100%;
+                height: 300px;
+                object-fit: cover;
+                object-position: center;
             }
-        }
-        
-        .palette__picture img {
-            display: block;
-            width: 100%;
-            height: 300px;
-            object-fit: cover;
-            object-position: center;
-        }
-        
-        .palette__main {
-            position: relative;
-            & .title-restaurants {
-                padding: 30px 24px;
-                margin-top: -25px;
-                margin-bottom: 0px;
-                font-family: 'Shrikhand', cursive;
-                font-weight: normal;
-                border-radius: 30px 30px 0 0;
-                background-color: colors.$menugrey;
-            }
-            & i {
-                color: black;
-                font-size: 30px;
-                position: absolute;
-                top: 25px;
-                right: 100px;
-            }
-            & .fas {
-                color: transparent;
-                @include mixins.gradient;
-                background-clip: text;
-                -webkit-background-clip: text;
-                opacity: 0;
-                transition: all 200ms ease-in-out;
-            }
-            &:hover .fas {
-                opacity: 1;
-                transform: scale(1.09);
-                cursor: pointer;
-            }
-        }
-        
-        .flex-meal {
-            margin: 0px;
-            background-color: colors.$menugrey;
-            display: flex;
-            gap: 15px;
-            flex-direction: column;
-            padding: 15px 10px;
-            & .meal-title {
-                padding: 15px 10px;
-                text-transform: uppercase;
+            
+            .palette__main {
                 position: relative;
-                &::after {
-                    content: "";
-                    height: 4px;
-                    width: 40px;
-                    background-color: colors.$backgreen;
+                & .title-restaurants {
+                    padding: 30px 24px;
+                    margin-top: -25px;
+                    margin-bottom: 0px;
+                    font-family: 'Shrikhand', cursive;
+                    font-weight: normal;
+                    border-radius: 30px 30px 0 0;
+                    background-color: colors.$menugrey;
+                }
+                & i {
+                    color: black;
+                    font-size: 30px;
                     position: absolute;
-                    top: 40px;
-                    left: 10px;
+                    top: 25px;
+                    right: 100px;
                 }
-            }
-            & .menu-align {
-                display: flex;
-                flex-direction: column;
-                gap: 6px;
-                padding: 10px;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                & .name-menu,
-                .description-menu,
-                .price {
-                    margin: 0px;
+                & .fas {
+                    color: transparent;
+                    @include mixins.gradient;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    opacity: 0;
+                    transition: all 200ms ease-in-out;
                 }
-            }
-            & .meal {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                background-color: white;
-                border-radius: 20px;
-                @include mixins.shadow-1;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                animation: 1s ease-in 1s slidein;
-                &:hover {
+                &:hover .fas {
+                    opacity: 1;
+                    transform: scale(1.09);
                     cursor: pointer;
                 }
-                & .description-menu {
-                    font-weight: lighter;
-                }
-                & .price-align {
-                    display: flex;
-                    overflow: hidden;
-                    white-space: nowrap;
-                    & .price {
-                        padding: 0px 15px;
-                        display: flex;
-                        align-items: end;
+            }
+            
+            .flex-meal {
+                margin: 0px;
+                background-color: colors.$menugrey;
+                display: flex;
+                gap: 15px;
+                flex-direction: column;
+                padding: 15px 10px;
+                & .meal-title {
+                    padding: 15px 10px;
+                    text-transform: uppercase;
+                    position: relative;
+                    &::after {
+                        content: "";
+                        height: 4px;
+                        width: 40px;
+                        background-color: colors.$backgreen;
+                        position: absolute;
+                        top: 40px;
+                        left: 10px;
                     }
                 }
-                & .price-align__check {
-                    background-color: colors.$backgreen;
-                    border-radius: 0px 20px 20px 0px;
-                    align-items: center;
+                & .menu-align {
                     display: flex;
-                    justify-content: center;
-                    margin: -16px -71px -16px 16px;
-                    transition-duration: .5s;
-                    width: 71px;
+                    flex-direction: column;
+                    gap: 6px;
+                    padding: 10px;
+                    & .name-menu,
+                    .description-menu,
+                    .price {
+                        margin: 0px;
+                    }
                 }
-                &:hover .price-align__check {
-                    margin: 0px;
-                }
-                & .check-items {
-                    align-items: center;
+                & .meal {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
                     background-color: white;
-                    border-radius: 100px;
-                    color: colors.$backgreen;
-                    display: flex;
-                    height: 25px;
-                    justify-content: center;
-                    transform: rotate(180deg);
-                    transition-duration: 1s;
-                    width: 25px;
-                }
-                &:hover .check-items {
-                    transform: rotate(0deg);
-                }
-            }
-        }
-        
-        .flex-meal {
-            background-color: colors.$menugrey;
-            display: flex;
-            gap: 10px;
-            flex-direction: column;
-            padding: 15px 10px;
-            & .flat {
-                background-color: white;
-                border-radius: 20px;
-            }
-        }
-        
-        .order {
-            display: flex;
-            justify-content: space-around;
-            padding: 30px 0px;
-            margin-bottom: 15px;
-            button {
-                margin-top: 20px;
-                border: none;
-                color: white;
-                padding: 15px;
-                width: 15%;
-                max-width: 204px;
-                min-width: 204px;
-                border-radius: 30px;
-                transition: all 200ms;
-                @include mixins.shadow-1;
-                @include mixins.gradient;
-                @media (max-width: 800px) {
-                    width: 50%;
-                }
-                &:hover {
-                    @include mixins.zoom;
-                    opacity: 0.9;
-                    cursor: pointer;
+                    border-radius: 20px;
+                    @include mixins.shadow-1;
+                    animation: 1s ease-in 1s slidein;
+                    &:hover {
+                        cursor: pointer;
+                    }
+                    & .description-menu {
+                        font-weight: lighter;
+                    }
+                    & .price-align {
+                        display: flex;
+                        overflow: hidden;
+                        white-space: nowrap;
+                        & .price {
+                            padding: 0px 15px;
+                            display: flex;
+                            align-items: end;
+                        }
+                    }
+                    & .price-align__check {
+                        background-color: colors.$backgreen;
+                        border-radius: 0px 20px 20px 0px;
+                        align-items: center;
+                        display: flex;
+                        justify-content: center;
+                        margin: -16px -71px -16px 16px;
+                        transition-duration: .5s;
+                        width: 71px;
+                    }
+                    &:hover .price-align__check {
+                        margin: 0px;
+                    }
+                    & .check-items {
+                        align-items: center;
+                        background-color: white;
+                        border-radius: 100px;
+                        color: colors.$backgreen;
+                        display: flex;
+                        height: 25px;
+                        justify-content: center;
+                        transform: rotate(180deg);
+                        transition-duration: 1s;
+                        width: 25px;
+                    }
+                    &:hover .check-items {
+                        transform: rotate(0deg);
+                    }
                 }
             }
-        }
+            
+            .flex-meal {
+                background-color: colors.$menugrey;
+                display: flex;
+                gap: 10px;
+                flex-direction: column;
+                padding: 15px 10px;
+                & .flat {
+                    background-color: white;
+                    border-radius: 20px;
+                }
+            }
+            
+            .order {
+                display: flex;
+                justify-content: space-around;
+                padding: 30px 0px;
+                margin-bottom: 15px;
+                button {
+                    margin-top: 20px;
+                    border: none;
+                    color: white;
+                    padding: 15px;
+                    width: 15%;
+                    max-width: 204px;
+                    min-width: 204px;
+                    border-radius: 30px;
+                    transition: all 200ms;
+                    @include mixins.shadow-1;
+                    @include mixins.gradient;
+                    @media (max-width: 800px) {
+                        width: 50%;
+                    }
+                    &:hover {
+                        @include mixins.zoom;
+                        opacity: 0.9;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+            @media screen and (max-width: 500px) {
+                .menu-align {
+                    & h3,
+                    h4 {
+                        max-width: 246px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                }
+            }

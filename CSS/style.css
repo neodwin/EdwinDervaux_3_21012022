@@ -308,8 +308,6 @@ footer a .fa-hands-helping {
   flex-direction: column;
   gap: 6px;
   padding: 10px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .flex-meal .menu-align .name-menu,
 .flex-meal .menu-align .description-menu,
@@ -323,8 +321,6 @@ footer a .fa-hands-helping {
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
   animation: 1s ease-in 1s slidein;
 }
 .flex-meal .meal:hover {
@@ -412,6 +408,16 @@ footer a .fa-hands-helping {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
+}
+
+@media screen and (max-width: 500px) {
+  .menu-align h3,
+.menu-align h4 {
+    max-width: 246px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
