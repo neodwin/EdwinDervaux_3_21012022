@@ -39,7 +39,7 @@
                     font-size: 30px;
                     position: absolute;
                     top: 25px;
-                    right: 100px;
+                    right: 35px;
                 }
                 & .fas {
                     color: transparent;
@@ -82,6 +82,7 @@
                     flex-direction: column;
                     gap: 6px;
                     padding: 10px;
+                    overflow: hidden;
                     & .name-menu,
                     .description-menu,
                     .price {
@@ -96,6 +97,13 @@
                     border-radius: 20px;
                     @include mixins.shadow-1;
                     animation: 1s ease-in 1s slidein;
+                    & h3,
+                    h4 {
+                        margin: 0;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        overflow: hidden;
+                    }
                     &:hover {
                         cursor: pointer;
                     }
@@ -104,38 +112,40 @@
                     }
                     & .price-align {
                         display: flex;
+                        justify-content: space-between;
                         overflow: hidden;
-                        white-space: nowrap;
+                        gap: 15px;
                         & .price {
-                            padding: 0px 15px;
                             display: flex;
-                            align-items: end;
+                            justify-content: flex-start;
+                            align-items: flex-end;
+                            width: 50px;
                         }
                     }
                     & .price-align__check {
                         background-color: colors.$backgreen;
                         border-radius: 0px 20px 20px 0px;
                         align-items: center;
-                        display: flex;
-                        justify-content: center;
-                        margin: -16px -71px -16px 16px;
+                        display: grid;
+                        place-items: center;
+                        flex-shrink: 0;
+                        margin-right: -80px;
+                        width: 64px;
                         transition-duration: .5s;
-                        width: 71px;
                     }
                     &:hover .price-align__check {
                         margin: 0px;
                     }
                     & .check-items {
-                        align-items: center;
-                        background-color: white;
-                        border-radius: 100px;
+                        display: grid;
+                        place-items: center;
+                        background: white;
                         color: colors.$backgreen;
-                        display: flex;
-                        height: 25px;
-                        justify-content: center;
+                        height: 16px;
+                        width: 16px;
+                        border-radius: 16px;
                         transform: rotate(180deg);
                         transition-duration: 1s;
-                        width: 25px;
                     }
                     &:hover .check-items {
                         transform: rotate(0deg);
@@ -184,13 +194,5 @@
             }
             
             @media screen and (max-width: 500px) {
-                .menu-align {
-                    & h3,
-                    h4 {
-                        max-width: 246px;
-                        overflow: hidden;
-                        text-overflow: ellipsis;
-                        white-space: nowrap;
-                    }
-                }
+                .menu-align {}
             }

@@ -265,7 +265,7 @@ footer a .fa-hands-helping {
   font-size: 30px;
   position: absolute;
   top: 25px;
-  right: 100px;
+  right: 35px;
 }
 .palette__main .fas {
   color: transparent;
@@ -308,6 +308,7 @@ footer a .fa-hands-helping {
   flex-direction: column;
   gap: 6px;
   padding: 10px;
+  overflow: hidden;
 }
 .flex-meal .menu-align .name-menu,
 .flex-meal .menu-align .description-menu,
@@ -323,6 +324,13 @@ footer a .fa-hands-helping {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   animation: 1s ease-in 1s slidein;
 }
+.flex-meal .meal h3,
+.flex-meal .meal h4 {
+  margin: 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .flex-meal .meal:hover {
   cursor: pointer;
 }
@@ -331,38 +339,40 @@ footer a .fa-hands-helping {
 }
 .flex-meal .meal .price-align {
   display: flex;
+  justify-content: space-between;
   overflow: hidden;
-  white-space: nowrap;
+  gap: 15px;
 }
 .flex-meal .meal .price-align .price {
-  padding: 0px 15px;
   display: flex;
-  align-items: end;
+  justify-content: flex-start;
+  align-items: flex-end;
+  width: 50px;
 }
 .flex-meal .meal .price-align__check {
   background-color: #99E2D0;
   border-radius: 0px 20px 20px 0px;
   align-items: center;
-  display: flex;
-  justify-content: center;
-  margin: -16px -71px -16px 16px;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  margin-right: -80px;
+  width: 64px;
   transition-duration: 0.5s;
-  width: 71px;
 }
 .flex-meal .meal:hover .price-align__check {
   margin: 0px;
 }
 .flex-meal .meal .check-items {
-  align-items: center;
-  background-color: white;
-  border-radius: 100px;
+  display: grid;
+  place-items: center;
+  background: white;
   color: #99E2D0;
-  display: flex;
-  height: 25px;
-  justify-content: center;
+  height: 16px;
+  width: 16px;
+  border-radius: 16px;
   transform: rotate(180deg);
   transition-duration: 1s;
-  width: 25px;
 }
 .flex-meal .meal:hover .check-items {
   transform: rotate(0deg);
@@ -408,16 +418,6 @@ footer a .fa-hands-helping {
   transform: scale(1.02);
   opacity: 0.9;
   cursor: pointer;
-}
-
-@media screen and (max-width: 500px) {
-  .menu-align h3,
-.menu-align h4 {
-    max-width: 246px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-  }
 }
 
 /*# sourceMappingURL=style.css.map */
