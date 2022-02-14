@@ -1,5 +1,6 @@
             @use "../utils/mixins.scss";
             @use "../utils/colors.scss";
+            @use "../utils/animations.scss";
             #restaurant-page {
                 a {
                     text-decoration: none;
@@ -90,13 +91,19 @@
                     }
                 }
                 & .meal {
+                    @for $i from 2 through 4 {
+                        &:nth-child(#{$i}) {
+                            animation-delay: 100ms * $i;
+                        }
+                    }
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     background-color: white;
                     border-radius: 20px;
                     @include mixins.shadow-1;
-                    animation: 1s ease-in 1s slidein;
+                    animation: appearance 1s;
+                    animation-fill-mode: both;
                     & h3,
                     h4 {
                         margin: 0;
