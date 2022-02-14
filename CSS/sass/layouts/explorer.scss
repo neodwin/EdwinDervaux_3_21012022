@@ -1,5 +1,27 @@
 @use "../utils/mixins.scss";
 @use "../utils/colors.scss";
+@use "../utils/animations.scss";
+.loader {
+    position: fixed;
+    display: grid;
+    place-items: center;
+    inset: 0;
+    height: 100vh;
+    z-index: 1;
+    background-color: #fff;
+    animation: faint 100ms;
+    animation-fill-mode: forwards;
+    animation-delay: 3s;
+    &::after {
+        content: "";
+        height: 130px;
+        width: 130px;
+        border-top: 5px solid colors.$purple;
+        border-radius: 50%;
+        animation: spin 1s infinite ease-in-out;
+    }
+}
+
 .explorer {
     text-align: center;
     padding-bottom: 20px;

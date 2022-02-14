@@ -8,3 +8,18 @@
         opacity: 1;
     }
 }
+
+@keyframes faint {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
