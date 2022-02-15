@@ -62,12 +62,7 @@
                 right: 15px;
             }
             & .fas {
-                color: transparent;
-                @include mixins.gradient;
-                background-clip: text;
-                -webkit-background-clip: text;
-                opacity: 0;
-                transition: all 200ms ease-in-out;
+                @include mixins.heart;
             }
             &:hover .fas {
                 opacity: 1;

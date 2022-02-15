@@ -2,6 +2,7 @@
 @use "../utils/colors.scss";
 @use "../utils/animations.scss";
 .loader {
+    font-family: 'Shrikhand', cursive;
     position: fixed;
     display: grid;
     place-items: center;
@@ -36,20 +37,7 @@
         margin: 0px 40px 15px 40px;
     }
     & button {
-        margin-top: 20px;
-        border: none;
-        color: white;
-        padding: 15px;
-        width: 15%;
-        max-width: 204px;
-        min-width: 204px;
-        border-radius: 30px;
-        transition: all 200ms;
-        @include mixins.shadow-1;
-        @include mixins.gradient;
-        @media (max-width: 800px) {
-            width: 50%;
-        }
+        @include mixins.button;
     }
     & button:hover {
         @include mixins.zoom;
