@@ -3,6 +3,7 @@
 @use "../utils/animations.scss";
 .loader {
     font-family: 'Shrikhand', cursive;
+    font-size: x-large;
     position: fixed;
     display: grid;
     place-items: center;
